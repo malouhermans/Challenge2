@@ -1,0 +1,108 @@
+body {
+  background-image: url("fotos/background.png");
+  background-repeat: no-repeat;
+  background-size: 600px;
+  font-family:  avenir;
+}
+
+.container{
+  color: #c87a7a;
+  position: relative;
+  overflow: hidden;
+  top: 20%;
+  display: grid;
+  min-height: 100%;
+  grid-template-columns: 4fr 3fr 4fr;
+  grid-template-rows: 300px 100px 40px 300px;
+  grid-template-areas: 
+  "header"
+  "clock"
+  "date"
+  "image"
+  ;
+}
+
+#clock{
+  grid-area: clock;
+  grid-column: 2;
+  font-size: 350%;
+  border-top: 2px solid #69342e;
+  border-bottom: 2px solid #69342e;
+}
+
+#date{
+  grid-area: date;
+  grid-column: 2;
+  margin-top: 5%;
+  justify-self: end;
+}
+
+#image{
+  grid-area: header;
+  grid-column: 2;
+  justify-self: center;
+  position: relative;
+  animation: 1000ms pulsate infinite alternate ease-in-out;
+}
+
+@keyframes pulsate {
+  0% { 
+    top: 90px; 
+  }
+  100% { 
+    top: 75px;
+  }
+}
+
+@media only screen and (min-width: 550px){
+  body{
+    background-size: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  body{
+    background-size: 1200px;
+  }
+
+   #clock{
+    font-size: 500%;
+    border: none;
+  }
+
+   #date{
+    justify-self: center;
+   }
+
+  #image{
+    grid-area: image;
+    grid-column: 2;
+    justify-self: center;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  body{
+    background-size: 1600px;
+  }
+
+.container{
+  grid-template-columns: 4fr 3fr 4fr;
+  grid-template-rows: 200px 100px 40px 300px;
+}
+
+
+
+   #clock{
+    font-size: 600%;
+  }
+
+  #date{
+    justify-self: center;
+    font-size: 200%;
+  }
+}
+
+
+
