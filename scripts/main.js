@@ -6,9 +6,6 @@ function show(){
     var minutes = today.getMinutes();
     var seconds = today.getSeconds();
     // plaatst een nul voor een enkel getal
-	    if (hours <= 9){
-	        hours = '0' + minutes;
-	    }
 	    if (minutes <= 9){
 	        minutes = '0' + minutes;
 	    }
@@ -38,7 +35,7 @@ function showImage(image){
 function dayNight(){
 	var today1 = new Date();
 	var hours1 = today1.getHours(); 
-	if (hours1 >= 8 && hours1 <= 24){ 
+	if (hours1 >= 8 && hours1 <= 22){ 
 		showImage(image = "fotos/sun.png");
 	}
     else{
